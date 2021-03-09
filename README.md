@@ -2,6 +2,8 @@
 
 **This is a WIP**
 
+[![Unit Tests](https://github.com/leozz37/inner-circle-like-bot/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/leozz37/inner-circle-like-bot/actions/workflows/unit-tests.yml)
+
 Inner Circle is a dating app, where you must "like" a person and vice versa so that you can chat!
 Sometimes clicking like several times in a row can be a tiring task, so we created a bot to automate that task!
 
