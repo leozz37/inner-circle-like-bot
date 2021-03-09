@@ -1,18 +1,35 @@
-import pyautogui
-import webbrowser
 import time
+import os
 
-print("Press Ctrl-C to quit.")
-webbrowser.open("https://theinnercircle.co/", new=2)
+from browser.browser_gui import BrowserGUI
+from events.browser_click import BrowserClick
 
-try:
-    while True:
-        x, y = pyautogui.position()
-        positionStr = "X: " + str(x).rjust(4) + " Y: " + str(y).rjust(4)
-        print(positionStr, end="")
-        print("\b" * len(positionStr), end="", flush=True)
-        pyautogui.click(1300, 533)
-        time.sleep(1)
 
-except KeyboardInterrupt:
-    print("\nDone.")
+# Debug mode outputs to stdout detailed information about each line processed
+DEBUG_MODE = os.environ["APP_DEBUG_MODE"]   # pragma: no cover
+
+if __name__ == '__main__':  # pragma: no cover
+    """
+    Main program entrypoint
+    """
+    if DEBUG_MODE == "True":
+        print("DEBUG: Debug mode enabled")
+        print("Press Ctrl-C to quit.")
+
+    try:
+        inner_circle_url = "https://theinnercircle.co/"
+        browser = BrowserGUI()
+        # TODO: implement validation
+        browser.open_url(inner_circle_url)
+
+        browser_click = BrowserClick()
+
+        while True:
+            if DEBUG_MODE == "True":
+                browser_click.print_mouse_position()
+            browser_click.click_like()
+            time.sleep(1)
+
+    except KeyboardInterrupt:
+        print("\nDone.")
+

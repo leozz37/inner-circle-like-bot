@@ -31,13 +31,13 @@ def test_url_validation_with_success(bi: BrowserInterface) -> None:
     Test if the url is valid
     """
     url = "http://www.example.com"
-    assert bi.url_validation(url)
+    assert bi.validate_url(url)
 
     url = "https://www.example.com"
-    assert bi.url_validation(url)
+    assert bi.validate_url(url)
 
     url = "https://www.example.com.br"
-    assert bi.url_validation(url)
+    assert bi.validate_url(url)
 
 
 def test_url_validation_fails(bi: BrowserInterface) -> None:
@@ -45,7 +45,7 @@ def test_url_validation_fails(bi: BrowserInterface) -> None:
     Test if the url is not valid
     """
     url = "www.example.com"
-    assert not bi.url_validation(url)
+    assert not bi.validate_url(url)
 
     url = "https:www.localhost"
-    assert not bi.url_validation(url)
+    assert not bi.validate_url(url)

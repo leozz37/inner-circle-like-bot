@@ -15,7 +15,7 @@ class BrowserInterface:
         """
         raise NotImplementedError("open_url not implemented")
 
-    def url_validation(self, url: str) -> bool:
+    def validate_url(self, url: str) -> bool:
         """
         Validates if the URL is valid
         """

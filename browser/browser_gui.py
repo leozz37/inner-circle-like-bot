@@ -8,11 +8,18 @@ class BrowserGUI(BrowserInterface):
     This class interact with the web browser
     """
 
-    def open_url(self, url: str) -> None:
+    def open_url(self, url: str) -> bool:
         """
         Open the given URL on the browser
 
         :param url: URL to be opened
         :type url: str
+
+        :return: True if succeed
+        :rtype: bool
         """
-        webbrowser.open(url, new=2)
+        if self.validate_url(url):
+            webbrowser.open(url, new=2)
+            return True
+        else:
+            return False
