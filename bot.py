@@ -6,9 +6,9 @@ from events.browser_click import BrowserClick
 
 
 # Debug mode outputs to stdout detailed information about each line processed
-DEBUG_MODE = os.environ["APP_DEBUG_MODE"]   # pragma: no cover
+DEBUG_MODE = os.environ["APP_DEBUG_MODE"]  # pragma: no cover
 
-if __name__ == '__main__':  # pragma: no cover
+if __name__ == "__main__":  # pragma: no cover
     """
     Main program entrypoint
     """
@@ -32,4 +32,3 @@ if __name__ == '__main__':  # pragma: no cover
 
     except KeyboardInterrupt:
         print("\nDone.")
-

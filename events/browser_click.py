@@ -7,6 +7,7 @@ class BrowserClick(BrowserEventsInterface):
     """
     This class interact with the web browser
     """
+
     def click_like(self) -> None:
         """
         Click the like button on Inner Circle page
