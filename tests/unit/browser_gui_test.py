@@ -10,7 +10,7 @@ def browser_gui() -> BrowserGUI:
     """
     browser_guir = BrowserGUI()
 
-    yiebrowser_guiser
+    yield browser_gui
 
 
 @pytest.mark.skip("WIP")
