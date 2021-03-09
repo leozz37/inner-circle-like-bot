@@ -1,5 +1,7 @@
 # Inner Circle Like Bot
 
+**This is a WIP**
+
 Inner Circle is a dating app, where you must "like" a person and vice versa so that you can chat!
 Sometimes clicking like several times in a row can be a tiring task, so we created a bot to automate that task!
 
@@ -12,4 +14,19 @@ Clone or download this repository:
 
 ```shell
 $ git clone https://github.com/leozz37/inner-circle-like-bot
+```
+
+This project uses **pipenv** and **pre-commit** in order to run some static
+checks and formatting on the code. After clone the repository you need to create
+a new **virtual environment** and install the dependencies:
+
+```shell
+$ pipenv shell
+$ pipenv install
+```
+
+To run the bot, run the following command:
+
+```shell
+$ python3 bot.py
 ```
