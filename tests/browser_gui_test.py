@@ -8,7 +8,7 @@ def browser_gui() -> BrowserGUI:
     """
     Create an instance to be used across the test suite
     """
-    browser_guir = BrowserGUI()
+    browser_gui = BrowserGUI()
 
     yield browser_gui
 
